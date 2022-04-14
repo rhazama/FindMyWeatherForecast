@@ -59,6 +59,12 @@ body {
     border-right:none;
 }
 
+#main-col-right {
+    background-color: rgba();
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
 .btn {
     margin:1px auto;
     width: 100%;
@@ -72,7 +78,58 @@ body {
     transition: .5s;
 }
 
+.city-div {
+    border: 1px solid rgba();
+    background-color: rgba();
+    margin: 20px;
+    height: 190px;
+    float: left;
+    width: 85%;
+    border-radius: 10px;
+    padding: 15px 20px;
+    line-height: 12px;
+}
+
+.city-div:hover {
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
+    background-color: rgba();
+}
+
 #city-title {
     font-weight: bold;
     font-size: 25px;
+}
+
+/*.forecast-div {
+
+}
+
+.forecast-div:hover {
+
+}
+
+.forecast-box {
+
+}
+
+footer {
+
+} */
+
+@media only screen and (max-width: 833px) {
+    .forecast-box {
+        width: 65px;
+        height: 150px;
+        margin: 10px auto;
+    }
+    #main-container {
+        height: 745px;
+    }
+    #main-col-left {
+        background-color: rgba();
+        justify-content: center;
+        border-bottom-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
 }
