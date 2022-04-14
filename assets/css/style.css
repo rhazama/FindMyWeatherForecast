@@ -5,6 +5,11 @@ html {
     background-position: bottom;
 }
 
+body {
+    background-color: rgba();
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
 #main-container {
     background-color: rgba(255, 255, 255, 0);
     width: 75%;
@@ -16,6 +21,17 @@ html {
     border:1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* img */
+
+#header {
+    width: 100%;
+    background-color: rgba();
+    height: 100px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: black;
+}
+
 #header-text {
     color: rbg();
     font-size: 40px;
@@ -24,6 +40,23 @@ html {
     padding-top: 20px;
     letter-spacing: 6px;
     text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#main-row {
+    background-color: rgba();
+    width: 85%;
+    margin: auto;
+    margin-top: 19px;
+    height: 460px;
+}
+
+#main-col-left {
+    background-color: rgba();
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid rgba();
+    border-right:none;
 }
 
 .btn {
