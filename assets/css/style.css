@@ -21,7 +21,14 @@ body {
     border:1px solid rgba(255, 255, 255, 0.5);
 }
 
-/* img */
+img {
+    width: 50px;
+    height: 50px;
+    background-color: rbg();
+    border-radius: 35px;
+    border: 1px solid rgba();
+}
+
 
 #header {
     width: 100%;
@@ -101,21 +108,50 @@ body {
     font-size: 25px;
 }
 
-/*.forecast-div {
-
+.forecast-div {
+    border: 1px solid rgba();
+    background-color: rgba();
+    margin: 15px;
+    height: 200px;
+    float: left;
+    width: 90%;
+    padding: 40px auto 0 auto;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
 }
 
 .forecast-div:hover {
-
+    box-shadow: 0px 5px 8px rgba();
+    transition: .2s;
+    background-color: rgba();
 }
 
 .forecast-box {
-
+width: 120px;
+height: 140px;
+background-color: rbg();
+float:left;
+border: 1px solid rgba();
+padding: 0 4px;
+display: flex;
+justify-content: center;
+padding: 10px;
 }
 
 footer {
-
-} */
+    text-align: center;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: rgb();
+    letter-spacing: 7px;
+    line-height: 20px;
+    font-size: 12px;
+    border-top: 1px rgba() solid;
+    background-color: rgba();
+}
 
 @media only screen and (max-width: 833px) {
     .forecast-box {
