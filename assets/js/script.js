@@ -16,6 +16,34 @@ function clearForecastBoxes() {
     };
 };
 
+$("form").on('submit', function (e) {
+    e.preventDefault();
+    var city = ""
+    city = $("#city-input").val()
+    var queryURL = ``
+    $.ajax({
+        url:queryURL,
+        method:"GET"
+    }).then(function (response) {
+        var longitude = response.coord.longitude
+        var latitude = response.coord.latitude
+    }
+
+function forecastData() {
+    var forecastUrl = ``
+    $.ajax({
+        url: forecastUrl,
+        method: "GET"
+    }).then(function (response) {
+        console.log("forecast response")
+        console.log(response)
+
+        clearForcastBoxes();
+
+        //date css work
+    }
+};
+
 function loadData() {
     var loadData = localStorage.getItem("cityStorage");
     if (loadData == null || loadData == "") {
@@ -28,3 +56,4 @@ function loadData() {
         buttonDic.prepend(create)
     };
 };
+
