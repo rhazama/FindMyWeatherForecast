@@ -1,8 +1,7 @@
 html {
-    background-image: url("");
+    background-image: url("../images/forecastBackground.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: bottom;
 }
 
 body {

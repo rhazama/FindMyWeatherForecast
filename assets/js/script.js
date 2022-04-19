@@ -197,7 +197,7 @@ $(".btn").on('click', function () {
         forecastData();
 
         function forecastData() {
-            var forecastUrl = ``
+            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}35&lon=${longitude}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
             $.ajax({
                 url: forecastUrl,
                 method: "GET"
@@ -209,7 +209,7 @@ $(".btn").on('click', function () {
 
                 $("#date1").append(response.list[7].dt_txt.slice(5, 10))
                 $('#date1').append("<br>")
-                var icon = ``
+                var icon = `http://api.openweathermap.org/img/wn/${response.list[7].weather[0].icon}@2x.png`
                 $('#date1').append(`<img src="${icon}">`);
                 $('#date1').attr("style", "font-size: 10px; text-align: center;")
                 $('#date1').append("Tempurature: " + response.list[7].main.temp.toFixed(0) + "°")
@@ -218,7 +218,7 @@ $(".btn").on('click', function () {
     
                 $("#date2").append(response.list[15].dt_txt.slice(5, 10))
                 $('#date2').append("<br>")
-                var icon = ``
+                var icon = `http://api.openweathermap.org/img/wn/${response.list[15].weather[0].icon}@2x.png`
                 $('#date2').append(`<img src="${icon}">`);
                 $('#date2').attr("style", "font-size: 10px; text-align: center;")
                 $('#date2').append("Tempurature: " + response.list[15].main.temp.toFixed(0) + "°")
@@ -227,7 +227,7 @@ $(".btn").on('click', function () {
     
                 $("#date3").append(response.list[23].dt_txt.slice(5, 10))
                 $('#date3').append("<br>")
-                var icon = ``
+                var icon = `http://api.openweathermap.org/img/wn/${response.list[23].weather[0].icon}@2x.png`
                 $('#date3').append(`<img src="${icon}">`);
                 $('#date3').attr("style", "font-size: 10px; text-align: center;")
                 $('#date3').append("Tempurature: " + response.list[23].main.temp.toFixed(0) + "°")
@@ -236,7 +236,7 @@ $(".btn").on('click', function () {
     
                 $("#date4").append(response.list[31].dt_txt.slice(5, 10))
                 $('#date4').append("<br>")
-                var icon = ``
+                var icon = `http://api.openweathermap.org/img/wn/${response.list[31].weather[0].icon}@2x.png`
                 $('#date4').append(`<img src="${icon}">`);
                 $('#date4').attr("style", "font-size: 10px; text-align: center;")
                 $('#date4').append("Tempurature: " + response.list[31].main.temp.toFixed(0) + "°")
@@ -245,7 +245,7 @@ $(".btn").on('click', function () {
     
                 $("#date5").append(response.list[39].dt_txt.slice(5, 10))
                 $('#date5').append("<br>")
-                var icon = ``
+                var icon = `http://api.openweathermap.org/img/wn/${response.list[39].weather[0].icon}@2x.png`
                 $('#date5').append(`<img src="${icon}">`);
                 $('#date5').attr("style", "font-size: 10px; text-align: center;")
                 $('#date5').append("Tempurature: " + response.list[39].main.temp.toFixed(0) + "°")
@@ -268,14 +268,14 @@ function initialize() {
     } else {
         var city = "California"
     }
-    var queryURL = ``
+    var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (response) {
         reloadData();
         console.log(response)
-        var icon = ``
+        var icon = `https://api.openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
 
         $(`#icon`).html(`<img src="${icon}">`);
         $(`#icon`).attr("class", "icon")
@@ -316,7 +316,7 @@ function initialize() {
         forecastData();
 
         function forecastData() {
-            var forecastUrl = ``
+            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}35&lon=${longitude}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
         $.ajax({
             url: forecastUrl,
             method: "GET"
@@ -328,7 +328,7 @@ function initialize() {
 
         $("#date1").append(response.list[7].dt_txt.slice(5, 10))
         $('#date1').append("<br>")
-        var icon = ``
+        var icon = `http://api.openweathermap.org/img/wn/${response.list[7].weather[0].icon}@2x.png`
         $('#date1').append(`<img src="${icon}">`);
         $('#date1').attr("style", "font-size: 10px; text-align: center;")
         $('#date1').append("Tempurature: " + response.list[7].main.temp.toFixed(0) + "°")
@@ -337,7 +337,7 @@ function initialize() {
 
         $("#date2").append(response.list[15].dt_txt.slice(5, 10))
         $('#date2').append("<br>")
-        var icon = ``
+        var icon = `http://api.openweathermap.org/img/wn/${response.list[15].weather[0].icon}@2x.png`
         $('#date2').append(`<img src="${icon}">`);
         $('#date2').attr("style", "font-size: 10px; text-align: center;")
         $('#date2').append("Tempurature: " + response.list[15].main.temp.toFixed(0) + "°")
@@ -346,7 +346,7 @@ function initialize() {
 
         $("#date3").append(response.list[23].dt_txt.slice(5, 10))
         $('#date3').append("<br>")
-        var icon = ``
+        var icon = `http://api.openweathermap.org/img/wn/${response.list[23].weather[0].icon}@2x.png`
         $('#date3').append(`<img src="${icon}">`);
         $('#date3').attr("style", "font-size: 10px; text-align: center;")
         $('#date3').append("Tempurature: " + response.list[23].main.temp.toFixed(0) + "°")
@@ -355,7 +355,7 @@ function initialize() {
 
         $("#date4").append(response.list[31].dt_txt.slice(5, 10))
         $('#date4').append("<br>")
-        var icon = ``
+        var icon = `http://api.openweathermap.org/img/wn/${response.list[31].weather[0].icon}@2x.png`
         $('#date4').append(`<img src="${icon}">`);
         $('#date4').attr("style", "font-size: 10px; text-align: center;")
         $('#date4').append("Tempurature: " + response.list[31].main.temp.toFixed(0) + "°")
@@ -364,7 +364,7 @@ function initialize() {
 
         $("#date5").append(response.list[39].dt_txt.slice(5, 10))
         $('#date5').append("<br>")
-        var icon = ``
+        var icon = `http://api.openweathermap.org/img/wn/${response.list[39].weather[0].icon}@2x.png`
         $('#date5').append(`<img src="${icon}">`);
         $('#date5').attr("style", "font-size: 10px; text-align: center;")
         $('#date5').append("Tempurature: " + response.list[39].main.temp.toFixed(0) + "°")
