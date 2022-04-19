@@ -1,4 +1,4 @@
-//var APIKey = "";
+var APIKey = "62eabb354d424659c7bbc7f4c19b2dc1";
 var buttonDiv = $("button-div");
 var cityBtnArr = [];
 
@@ -20,7 +20,7 @@ $("form").on('submit', function (e) {
     e.preventDefault();
     var city = ""
     city = $("#city-input").val()
-    var queryURL = ``
+    var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`
     $.ajax({
         url:queryURL,
         method:"GET"
@@ -29,7 +29,7 @@ $("form").on('submit', function (e) {
         var latitude = response.coord.lat
 
         $("#UV-index").empty();
-        var uvURL = ''
+        var uvURL = 'http://api.openweathermap.org/data/2.5/uvi?appid=${APIKey}&lat=${latitude}&lon=${longitude}'
         $.ajax({
             url:uvURL,
             method: "GET"
