@@ -2,104 +2,105 @@ html {
     background-image: url("../images/forecastBackground.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: bottom;
+    background-size: 100%;
 }
 
 body {
-    background-color: rgba();
+    background-color: rgba(255, 255, 255, 0);
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 #main-container {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(230, 230, 230, 0.692);
     width: 75%;
     min-width:500px;
     height: 600px;
-    margin: 7% auto;border-radius: 5px;
+    margin: 3% auto;border-radius: 10px;
     padding: 0;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
-    border:1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.37);
+    border:1px solid rgba(255, 255, 255, 0.568);
 }
 
 img {
     width: 50px;
     height: 50px;
-    background-color: rbg();
+    background-color: rbg(219, 219, 219);
     border-radius: 35px;
-    border: 1px solid rgba();
+    border: 1px solid rgba(0, 0, 0, 0,137);
 }
-
 
 #header {
     width: 100%;
-    background-color: rgba();
+    background-color: rgba(85, 85, 85, 0.158);
     height: 100px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    color: black;
+    color: white;
 }
 
 #header-text {
-    color: rbg();
-    font-size: 40px;
+    color: rbg(255, 255, 255);
+    font-size: 36px;
     text-align: center;
     margin: 0 auto;
     padding-top: 20px;
     letter-spacing: 6px;
-    text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.281);
 }
 
 #main-row {
-    background-color: rgba();
-    width: 85%;
+    background-color: rgba(255, 0, 0, 0);
+    width: 90%;
     margin: auto;
-    margin-top: 19px;
+    margin-top: 20px;
     height: 460px;
 }
 
 #main-col-left {
-    background-color: rgba();
+    background-color: rgba(255, 255, 255, 0.589);
     justify-content: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: 2px solid rgba();
-    border-right:none;
+    border: 2px solid rgba(255, 255, 255, 0.589);
+    border-right: none;
 }
 
 #main-col-right {
-    background-color: rgba();
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 20px;
 }
 
 .btn {
     margin:1px auto;
     width: 100%;
     border: none;
-    background-color: rbg();
+    background-color: rbg(214, 214, 214);
     border-radius: 20px;
 }
 
 .btn:hover {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     transition: .5s;
 }
 
 .city-div {
-    border: 1px solid rgba();
-    background-color: rgba();
-    margin: 20px;
-    height: 190px;
+    border: 1px solid rgba(112, 112, 112, 0.315);
+    background-color: rgba(255, 255, 255, 0.295);
+    margin: 15px;
+    height: 290px;
     float: left;
-    width: 85%;
+    width: 90%;
     border-radius: 10px;
-    padding: 15px 20px;
+    padding: 15px 25px;
     line-height: 12px;
 }
 
 .city-div:hover {
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
     transition: 0.2s;
-    background-color: rgba();
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 #city-title {
@@ -108,8 +109,8 @@ img {
 }
 
 .forecast-div {
-    border: 1px solid rgba();
-    background-color: rgba();
+    border: 1px solid rgba(112, 112, 112, 0.315);
+    background-color: rgba(255, 255, 255, 0.295);
     margin: 15px;
     height: 200px;
     float: left;
@@ -121,17 +122,19 @@ img {
 }
 
 .forecast-div:hover {
-    box-shadow: 0px 5px 8px rgba();
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.377);
     transition: .2s;
-    background-color: rgba();
+    background-color: rgba(255, 255, 255 0.417);
 }
 
 .forecast-box {
     width: 120px;
     height: 140px;
-    background-color: rbg();
-    float:left;
-    border: 1px solid rgba();
+    background-color: rbg(230, 230, 230);
+    float: left;
+    border: 1px solid rgba(112, 112, 112, 0.315);
+    margin: 15px 1% 0px 1%;
+    border-radius: 10px;
     padding: 0 4px;
     display: flex;
     justify-content: center;
@@ -144,12 +147,12 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    color: rgb();
-    letter-spacing: 7px;
+    color: rgb(31, 31, 31);
+    letter-spacing: 8px;
     line-height: 20px;
     font-size: 12px;
-    border-top: 1px rgba() solid;
-    background-color: rgba();
+    border-top: 1px rgba(255, 255, 255, 0.315) solid;
+    background-color: rgba(255, 255, 255, 0.74);
 }
 
 @media only screen and (max-width: 833px) {
@@ -159,10 +162,10 @@ footer {
         margin: 10px auto;
     }
     #main-container {
-        height: 745px;
+        height: 750px;
     }
     #main-col-left {
-        background-color: rgba();
+        background-color: rgba(255, 255, 255, 0.589);
         justify-content: center;
         border-bottom-left-radius: 0px;
         border-bottom-left-radius: 0px;

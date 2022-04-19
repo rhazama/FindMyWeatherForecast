@@ -13,21 +13,23 @@
 <body>
     <!--main container-->
     <div class="container" id="main-container">
+        <!--header-->
         <div class="container" id="header">
             <h1 id="header-text">Find My Weather Forecast</h1>
         </div>
+
         <div class="row" id="main-row">
-            <div id="main-col-left">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3"id="main-col-left">
                 <form id="form">
                     <div class="form-group">
-                        <label>Search for a City:</label>
-                        <input type="text" class="form-control" id="cityInput" autocomplete="off" placeholder="type in city">
+                        <label for="exampleFormControlInput1">Search for a City:</label>
+                        <input type="text" class="form-control" id="city-input" autocomplete="off" placeholder="type in city">
                     </div>
                 </form>
                 <div class="button-div"></div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" id="main-col-right">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9" id="main-col-right">
             <div class="city-div">
                 <p id="icon" class="icon"></p>
                 <p id="city-title"></p>
@@ -37,19 +39,19 @@
             </div>
             <div class="forecast-div">
                 <div class="forecast-box" id="box1">
-                    <p id="day1"></p>
+                    <p id="date1"></p>
                 </div>
                 <div class="forecast-box" id="box2">
-                    <p id="day2"></p>
+                    <p id="date2"></p>
                 </div>
                 <div class="forecast-box" id="box3">
-                    <p id="day3"></p>
+                    <p id="date3"></p>
                 </div>
                 <div class="forecast-box" id="box4">
-                    <p id="day4"></p>
+                    <p id="date4"></p>
                 </div>
                 <div class="forecast-box" id="box5">
-                    <p id="day5"></p>
+                    <p id="date5"></p>
                 </div>
             </div>
         </div>
