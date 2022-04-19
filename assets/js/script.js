@@ -77,55 +77,68 @@ $("form").on('submit', function (e) {
 
             clearForcastBoxes();
 
-        $("#date1").append(response.list[7].dt_txt.slice(5, 10))
-        $('#date1').append("<br>")
-        var icon = ``
-        $('#date1').append(`<img src="${icon}">`);
-        $('#date1').attr("style", "font-size: 10px; text-align: center;")
-        $('#date1').append("Tempurature: " + response.list[7].main.temp.toFixed(0) + "°")
-        $('#date1').append("<br>")
-        $('#date1').append("Humidity: " + response.list[7].main.humidity + "%")
+            $("#date1").append(response.list[7].dt_txt.slice(5, 10))
+            $('#date1').append("<br>")
+            var icon = ``
+            $('#date1').append(`<img src="${icon}">`);
+            $('#date1').attr("style", "font-size: 10px; text-align: center;")
+            $('#date1').append("Tempurature: " + response.list[7].main.temp.toFixed(0) + "°")
+            $('#date1').append("<br>")
+            $('#date1').append("Humidity: " + response.list[7].main.humidity + "%")
 
-        $("#date2").append(response.list[15].dt_txt.slice(5, 10))
-        $('#date2').append("<br>")
-        var icon = ``
-        $('#date2').append(`<img src="${icon}">`);
-        $('#date2').attr("style", "font-size: 10px; text-align: center;")
-        $('#date2').append("Tempurature: " + response.list[15].main.temp.toFixed(0) + "°")
-        $('#date2').append("<br>")
-        $('#date2').append("Humidity: " + response.list[15].main.humidity + "%")
+            $("#date2").append(response.list[15].dt_txt.slice(5, 10))
+            $('#date2').append("<br>")
+            var icon = ``
+            $('#date2').append(`<img src="${icon}">`);
+            $('#date2').attr("style", "font-size: 10px; text-align: center;")
+            $('#date2').append("Tempurature: " + response.list[15].main.temp.toFixed(0) + "°")
+            $('#date2').append("<br>")
+            $('#date2').append("Humidity: " + response.list[15].main.humidity + "%")
 
-        $("#date3").append(response.list[23].dt_txt.slice(5, 10))
-        $('#date3').append("<br>")
-        var icon = ``
-        $('#date3').append(`<img src="${icon}">`);
-        $('#date3').attr("style", "font-size: 10px; text-align: center;")
-        $('#date3').append("Tempurature: " + response.list[23].main.temp.toFixed(0) + "°")
-        $('#date3').append("<br>")
-        $('#date3').append("Humidity: " + response.list[23].main.humidity + "%")
+            $("#date3").append(response.list[23].dt_txt.slice(5, 10))
+            $('#date3').append("<br>")
+            var icon = ``
+            $('#date3').append(`<img src="${icon}">`);
+            $('#date3').attr("style", "font-size: 10px; text-align: center;")
+            $('#date3').append("Tempurature: " + response.list[23].main.temp.toFixed(0) + "°")
+            $('#date3').append("<br>")
+            $('#date3').append("Humidity: " + response.list[23].main.humidity + "%")
 
-        $("#date4").append(response.list[31].dt_txt.slice(5, 10))
-        $('#date4').append("<br>")
-        var icon = ``
-        $('#date4').append(`<img src="${icon}">`);
-        $('#date4').attr("style", "font-size: 10px; text-align: center;")
-        $('#date4').append("Tempurature: " + response.list[31].main.temp.toFixed(0) + "°")
-        $('#date4').append("<br>")
-        $('#date4').append("Humidity: " + response.list[31].main.humidity + "%")
+            $("#date4").append(response.list[31].dt_txt.slice(5, 10))
+            $('#date4').append("<br>")
+            var icon = ``
+            $('#date4').append(`<img src="${icon}">`);
+            $('#date4').attr("style", "font-size: 10px; text-align: center;")
+            $('#date4').append("Tempurature: " + response.list[31].main.temp.toFixed(0) + "°")
+            $('#date4').append("<br>")
+            $('#date4').append("Humidity: " + response.list[31].main.humidity + "%")
 
-        $("#date5").append(response.list[39].dt_txt.slice(5, 10))
-        $('#date5').append("<br>")
-        var icon = ``
-        $('#date5').append(`<img src="${icon}">`);
-        $('#date5').attr("style", "font-size: 10px; text-align: center;")
-        $('#date5').append("Tempurature: " + response.list[39].main.temp.toFixed(0) + "°")
-        $('#date5').append("<br>")
-        $('#date5').append("Humidity: " + response.list[39].main.humidity + "%")
+            $("#date5").append(response.list[39].dt_txt.slice(5, 10))
+            $('#date5').append("<br>")
+            var icon = ``
+            $('#date5').append(`<img src="${icon}">`);
+            $('#date5').attr("style", "font-size: 10px; text-align: center;")
+            $('#date5').append("Tempurature: " + response.list[39].main.temp.toFixed(0) + "°")
+            $('#date5').append("<br>")
+            $('#date5').append("Humidity: " + response.list[39].main.humidity + "%")
+        })
+    }
+
+    generateButton();
+    clearForm();
+
+    function generateButton() {
+        var create = $("<button>")
+        create.attr("class", "btn btn-outline-secondary")
+        create.attr("type", "button")
+        create.text(response.name)
+        buttonDiv.prepend(create)
+        var cityString = response.name
+        cutyButtonArr.push(cutyString.toString())
+        localStorage.setItem("cityStorage", JSON.stringify(cityButtonArr))
+        };
     })
-}
-
-generateButton();
-clearForm();
+});
 
 function loadData() {
     var loadData = localStorage.getItem("cityStorage");
