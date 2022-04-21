@@ -50,7 +50,7 @@ $("form").on('submit', function (e) {
             }
         });
 
-        var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+        var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
 
         $('#icon').html(`<img src="${icon}">`);
         $('#icon').attr("class", "icon")
@@ -79,7 +79,7 @@ $("form").on('submit', function (e) {
 
             $("#date1").append(response.list[7].dt_txt.slice(5, 10))
             $('#date1').append("<br>")
-            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
             $('#date1').append(`<img src="${icon}">`);
             $('#date1').attr("style", "font-size: 10px; text-align: center;")
             $('#date1').append("Tempurature: " + response.list[7].main.temp.toFixed(0) + "°")
@@ -88,7 +88,7 @@ $("form").on('submit', function (e) {
 
             $("#date2").append(response.list[15].dt_txt.slice(5, 10))
             $('#date2').append("<br>")
-            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
             $('#date2').append(`<img src="${icon}">`);
             $('#date2').attr("style", "font-size: 10px; text-align: center;")
             $('#date2').append("Tempurature: " + response.list[15].main.temp.toFixed(0) + "°")
@@ -97,7 +97,7 @@ $("form").on('submit', function (e) {
 
             $("#date3").append(response.list[23].dt_txt.slice(5, 10))
             $('#date3').append("<br>")
-            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
             $('#date3').append(`<img src="${icon}">`);
             $('#date3').attr("style", "font-size: 10px; text-align: center;")
             $('#date3').append("Tempurature: " + response.list[23].main.temp.toFixed(0) + "°")
@@ -106,7 +106,7 @@ $("form").on('submit', function (e) {
 
             $("#date4").append(response.list[31].dt_txt.slice(5, 10))
             $('#date4').append("<br>")
-            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
             $('#date4').append(`<img src="${icon}">`);
             $('#date4').attr("style", "font-size: 10px; text-align: center;")
             $('#date4').append("Tempurature: " + response.list[31].main.temp.toFixed(0) + "°")
@@ -115,7 +115,7 @@ $("form").on('submit', function (e) {
 
             $("#date5").append(response.list[39].dt_txt.slice(5, 10))
             $('#date5').append("<br>")
-            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
             $('#date5').append(`<img src="${icon}">`);
             $('#date5').attr("style", "font-size: 10px; text-align: center;")
             $('#date5').append("Tempurature: " + response.list[39].main.temp.toFixed(0) + "°")
@@ -210,7 +210,7 @@ $(".btn").on('click', function () {
 
                 $("#date1").append(response.list[7].dt_txt.slice(5, 10))
                 $('#date1').append("<br>")
-                var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+                var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
                 $('#date1').append(`<img src="${icon}">`);
                 $('#date1').attr("style", "font-size: 10px; text-align: center;")
                 $('#date1').append("Tempurature: " + response.list[7].main.temp.toFixed(0) + "°")
@@ -219,7 +219,7 @@ $(".btn").on('click', function () {
     
                 $("#date2").append(response.list[15].dt_txt.slice(5, 10))
                 $('#date2').append("<br>")
-                var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+                var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
                 $('#date2').append(`<img src="${icon}">`);
                 $('#date2').attr("style", "font-size: 10px; text-align: center;")
                 $('#date2').append("Tempurature: " + response.list[15].main.temp.toFixed(0) + "°")
@@ -228,7 +228,7 @@ $(".btn").on('click', function () {
     
                 $("#date3").append(response.list[23].dt_txt.slice(5, 10))
                 $('#date3').append("<br>")
-                var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+                var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
                 $('#date3').append(`<img src="${icon}">`);
                 $('#date3').attr("style", "font-size: 10px; text-align: center;")
                 $('#date3').append("Tempurature: " + response.list[23].main.temp.toFixed(0) + "°")
@@ -237,7 +237,7 @@ $(".btn").on('click', function () {
     
                 $("#date4").append(response.list[31].dt_txt.slice(5, 10))
                 $('#date4').append("<br>")
-                var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+                var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
                 $('#date4').append(`<img src="${icon}">`);
                 $('#date4').attr("style", "font-size: 10px; text-align: center;")
                 $('#date4').append("Tempurature: " + response.list[31].main.temp.toFixed(0) + "°")
@@ -246,7 +246,7 @@ $(".btn").on('click', function () {
     
                 $("#date5").append(response.list[39].dt_txt.slice(5, 10))
                 $('#date5').append("<br>")
-                var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+                var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
                 $('#date5').append(`<img src="${icon}">`);
                 $('#date5').attr("style", "font-size: 10px; text-align: center;")
                 $('#date5').append("Tempurature: " + response.list[39].main.temp.toFixed(0) + "°")
@@ -276,7 +276,7 @@ function initialize() {
     }).then(function (response) {
         reloadData();
         console.log(response)
-        var icon = `http://openweathermap.org/img/wn/10d@2x.png${response}`
+        var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
 
         $(`#icon`).html(`<img src="${icon}">`);
         $(`#icon`).attr("class", "icon")
@@ -329,7 +329,7 @@ function initialize() {
 
         $("#date1").append(response.list[7].dt_txt.slice(5, 10))
         $('#date1').append("<br>")
-        var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+        var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
         $('#date1').append(`<img src="${icon}">`);
         $('#date1').attr("style", "font-size: 10px; text-align: center;")
         $('#date1').append("Tempurature: " + response.list[7].main.temp.toFixed(0) + "°")
@@ -338,7 +338,7 @@ function initialize() {
 
         $("#date2").append(response.list[15].dt_txt.slice(5, 10))
         $('#date2').append("<br>")
-        var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+        var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
         $('#date2').append(`<img src="${icon}">`);
         $('#date2').attr("style", "font-size: 10px; text-align: center;")
         $('#date2').append("Tempurature: " + response.list[15].main.temp.toFixed(0) + "°")
@@ -347,7 +347,7 @@ function initialize() {
 
         $("#date3").append(response.list[23].dt_txt.slice(5, 10))
         $('#date3').append("<br>")
-        var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+        var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
         $('#date3').append(`<img src="${icon}">`);
         $('#date3').attr("style", "font-size: 10px; text-align: center;")
         $('#date3').append("Tempurature: " + response.list[23].main.temp.toFixed(0) + "°")
@@ -356,7 +356,7 @@ function initialize() {
 
         $("#date4").append(response.list[31].dt_txt.slice(5, 10))
         $('#date4').append("<br>")
-        var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+        var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
         $('#date4').append(`<img src="${icon}">`);
         $('#date4').attr("style", "font-size: 10px; text-align: center;")
         $('#date4').append("Tempurature: " + response.list[31].main.temp.toFixed(0) + "°")
@@ -365,7 +365,7 @@ function initialize() {
 
         $("#date5").append(response.list[39].dt_txt.slice(5, 10))
         $('#date5').append("<br>")
-        var icon = `http://openweathermap.org/img/wn/10d@2x.png`
+        var icon = `http://openweathermap.org/img/wn/10d@2x.png&APPID=${APIKey}`
         $('#date5').append(`<img src="${icon}">`);
         $('#date5').attr("style", "font-size: 10px; text-align: center;")
         $('#date5').append("Tempurature: " + response.list[39].main.temp.toFixed(0) + "°")
