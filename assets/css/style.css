@@ -3,7 +3,7 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
-    background-size: 100%;
+    background-size: 200%;
 }
 
 body {
@@ -25,14 +25,14 @@ body {
 img {
     width: 50px;
     height: 50px;
-    background-color: rbg(219, 219, 219);
+    background-color: rgb(219, 219, 219);
     border-radius: 35px;
-    border: 1px solid rgba(0, 0, 0, 0,137);
+    border: 1px solid rgba(0, 0, 0, 0.137);
 }
 
 #header {
     width: 100%;
-    background-color: rgba(85, 85, 85, 0.158);
+    background-color: rgba(85, 85, 85, 0.2);
     height: 100px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -40,7 +40,7 @@ img {
 }
 
 #header-text {
-    color: rbg(255, 255, 255);
+    color: rgb(255, 255, 255);
     font-size: 36px;
     text-align: center;
     margin: 0 auto;
@@ -58,25 +58,19 @@ img {
 }
 
 #main-col-left {
-    background-color: rgba(255, 255, 255, 0.589);
+    background-color: rgba(255, 255, 255, 0.6);
     justify-content: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.589);
+    border: 2px solid rgba(255, 255, 255, 0.6);
     border-right: none;
-}
-
-#main-col-right {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 20px;
 }
 
 .btn {
     margin:1px auto;
     width: 100%;
     border: none;
-    background-color: rbg(214, 214, 214);
+    background-color: rgb(214, 214, 214);
     border-radius: 20px;
 }
 
@@ -85,11 +79,17 @@ img {
     transition: .5s;
 }
 
+#main-col-right {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .city-div {
     border: 1px solid rgba(112, 112, 112, 0.315);
     background-color: rgba(255, 255, 255, 0.295);
     margin: 15px;
-    height: 290px;
+    height: 200px;
     float: left;
     width: 90%;
     border-radius: 10px;
@@ -130,7 +130,7 @@ img {
 .forecast-box {
     width: 120px;
     height: 140px;
-    background-color: rbg(230, 230, 230);
+    background-color: rgb(230, 230, 230);
     float: left;
     border: 1px solid rgba(112, 112, 112, 0.315);
     margin: 15px 1% 0px 1%;
@@ -155,19 +155,19 @@ footer {
     background-color: rgba(255, 255, 255, 0.74);
 }
 
-@media only screen and (max-width: 833px) {
+@media only screen and (max-width: 825px) {
     .forecast-box {
-        width: 65px;
-        height: 150px;
+        width: 70px;
+        height: 140px;
         margin: 10px auto;
     }
     #main-container {
         height: 750px;
     }
     #main-col-left {
-        background-color: rgba(255, 255, 255, 0.589);
+        background-color: rgba(255, 255, 255, 0.6);
         justify-content: center;
-        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
     }
 }

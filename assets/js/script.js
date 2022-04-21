@@ -59,7 +59,7 @@ $("form").on('submit', function (e) {
         $(".city").attr("style", "font-weight: bold; font-size: 1px")
         $("#wind-speed").append("Wind speed: " + response.wind.speed + " MPH")
         var convert = response.main.temp
-        var F = (conver - 273.15) * 1.80 + 32
+        var F = (convert - 273.15) * 1.80 + 32
         F = F.toFixed(0)
         $("#tempurature").empty()
         $("#tempurature").append("Tempurature: " + F + "°")
@@ -148,6 +148,7 @@ function loadData() {
     cityButtonArr = JSON.parse(loadData)
     for (i = 0; i < cityButtonArr.length; i++) {
         var create = $("<button>")
+        create.attr("class", "btn btn-outline-secondary")
         create.text(cityButtonArr[i])
         buttonDiv.prepend(create)
     };
@@ -291,7 +292,7 @@ function initialize() {
         var longitude = response.coord.lon
         var latitude = response.coord.lat
 
-        $('#UV-index').empty()
+        $("#UV-index").empty()
         let uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat" + latitude + "&lon=" + longitude;
         $.ajax({
             url: uvURL,
