@@ -25,11 +25,11 @@ $("form").on('submit', function (e) {
         url:queryURL,
         method:"GET"
     }).then(function (response) {
-        var longitude = response.coord.lon
-        var latitude = response.coord.lat
+        var lon = response.coord.lon
+        var lat = response.coord.lat
 
         $("#UV-index").empty();
-        var uvURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${APIKey}&lat=${latitude}&lon=${longitude}`
+        var uvURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${APIKey}`
         $.ajax({
             url:uvURL,
             method: "GET"
@@ -67,7 +67,7 @@ $("form").on('submit', function (e) {
         forecastData();
 
         function forecastData() {
-            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}35&lon=${longitude}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
+            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
             $.ajax({
                 url: forecastUrl,
                 method: "GET"
@@ -134,8 +134,8 @@ $("form").on('submit', function (e) {
         create.text(response.name)
         buttonDiv.prepend(create)
         var cityString = response.name
-        cityButtonArr.push(cityString.toString())
-        localStorage.setItem("cityStorage", JSON.stringify(cityButtonArr))
+        cityBtnArr.push(cityString.toString())
+        localStorage.setItem("cityStorage", JSON.stringify(cityBtnArr))
         };
     })
 });
@@ -145,11 +145,11 @@ function loadData() {
     if (loadData == null || loadData == "") {
         return;
     }
-    cityButtonArr = JSON.parse(loadData)
-    for (i = 0; i < cityButtonArr.length; i++) {
+    cityBtnArr = JSON.parse(loadData)
+    for (i = 0; i < cityBtnArr.length; i++) {
         var create = $("<button>")
         create.attr("class", "btn btn-outline-secondary")
-        create.text(cityButtonArr[i])
+        create.text(cityBtnArr[i])
         buttonDiv.prepend(create)
     };
 };
@@ -170,11 +170,11 @@ $(".btn").on('click', function () {
         F = F.toFixed(0)
         $("#tempurature").append("Tempurature: " + F + "°")
 
-        var longitude = response.coord.lon
-        var latitude = response.coord.lat
+        var lon = response.coord.lon
+        var lat = response.coord.lat
 
         $("#UV-index").empty()
-        var uvURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${APIKey}&lat=${latitude}&lon=${longitude}`
+        var uvURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${APIKey}&lat=${lat}&lon=${lon}`
         $.ajax({
             url: uvURL,
             method: "GET"
@@ -198,7 +198,7 @@ $(".btn").on('click', function () {
         forecastData();
 
         function forecastData() {
-            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}35&lon=${longitude}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
+            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
             $.ajax({
                 url: forecastUrl,
                 method: "GET"
@@ -263,8 +263,8 @@ function clearForm() {
 
 function initialize() {
     var city = ""
-    if(cityButtonArr.length > 0){
-        lastSearched = cityButtonArr.reverse()
+    if(cityBtnArr.length > 0){
+        lastSearched = cityBtnArr.reverse()
         var city = lastSearched[0]
     } else {
         var city = "California"
@@ -276,7 +276,7 @@ function initialize() {
     }).then(function (response) {
         reloadData();
         console.log(response)
-        var icon = `https://api.openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+        var icon = `http://openweathermap.org/img/wn/${response.weather[0].icon}10d@2x.png`
 
         $(`#icon`).html(`<img src="${icon}">`);
         $(`#icon`).attr("class", "icon")
@@ -289,11 +289,11 @@ function initialize() {
         F = F.toFixed(0)
         $("#tempurature").append("Tempurature: " + F + "°")
 
-        var longitude = response.coord.lon
-        var latitude = response.coord.lat
+        var lon = response.coord.lon
+        var lat = response.coord.lat
 
         $("#UV-index").empty()
-        let uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat" + latitude + "&lon=" + longitude;
+        let uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat" + lat + "&lon=" + lon;
         $.ajax({
             url: uvURL,
             method: "GET"
@@ -317,7 +317,7 @@ function initialize() {
         forecastData();
 
         function forecastData() {
-            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}35&lon=${longitude}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
+            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
         $.ajax({
             url: forecastUrl,
             method: "GET"
