@@ -20,7 +20,7 @@ $("form").on('submit', function (e) {
     e.preventDefault();
     var city = ""
     city = $("#city-input").val()
-    var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},${country}&appid=${APIKey}`
+    var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`
     $.ajax({
         url:queryURL,
         method:"GET"
@@ -29,7 +29,7 @@ $("form").on('submit', function (e) {
         var lat = response.coord.lat
 
         $("#UV-index").empty();
-        var uvURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${APIKey}`
+        var uvURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${APIKey}`
         $.ajax({
             url:uvURL,
             method: "GET"
@@ -174,7 +174,7 @@ $(".btn").on('click', function () {
         var lat = response.coord.lat
 
         $("#UV-index").empty()
-        var uvURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${APIKey}&lat=${lat}&lon=${lon}`
+        var uvURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${APIKey}`
         $.ajax({
             url: uvURL,
             method: "GET"
@@ -293,7 +293,7 @@ function initialize() {
         var lat = response.coord.lat
 
         $("#UV-index").empty()
-        let uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat" + lat + "&lon=" + lon;
+        let uvURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${APIKey}`
         $.ajax({
             url: uvURL,
             method: "GET"
