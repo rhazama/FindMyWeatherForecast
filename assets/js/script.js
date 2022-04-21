@@ -50,7 +50,7 @@ $("form").on('submit', function (e) {
             }
         });
 
-        var icon = `https://api.openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+        var icon = `http://openweathermap.org/img/wn/10d@2x.png`
 
         $('#icon').html(`<img src="${icon}">`);
         $('#icon').attr("class", "icon")
@@ -67,7 +67,7 @@ $("form").on('submit', function (e) {
         forecastData();
 
         function forecastData() {
-            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
+            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=${APIKey}`
             $.ajax({
                 url: forecastUrl,
                 method: "GET"
@@ -79,7 +79,7 @@ $("form").on('submit', function (e) {
 
             $("#date1").append(response.list[7].dt_txt.slice(5, 10))
             $('#date1').append("<br>")
-            var icon = `http://api.openweathermap.org/img/wn/${response.list[7].weather[0].icon}@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
             $('#date1').append(`<img src="${icon}">`);
             $('#date1').attr("style", "font-size: 10px; text-align: center;")
             $('#date1').append("Tempurature: " + response.list[7].main.temp.toFixed(0) + "°")
@@ -88,7 +88,7 @@ $("form").on('submit', function (e) {
 
             $("#date2").append(response.list[15].dt_txt.slice(5, 10))
             $('#date2').append("<br>")
-            var icon = `http://api.openweathermap.org/img/wn/${response.list[15].weather[0].icon}@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
             $('#date2').append(`<img src="${icon}">`);
             $('#date2').attr("style", "font-size: 10px; text-align: center;")
             $('#date2').append("Tempurature: " + response.list[15].main.temp.toFixed(0) + "°")
@@ -97,7 +97,7 @@ $("form").on('submit', function (e) {
 
             $("#date3").append(response.list[23].dt_txt.slice(5, 10))
             $('#date3').append("<br>")
-            var icon = `http://api.openweathermap.org/img/wn/${response.list[23].weather[0].icon}@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
             $('#date3').append(`<img src="${icon}">`);
             $('#date3').attr("style", "font-size: 10px; text-align: center;")
             $('#date3').append("Tempurature: " + response.list[23].main.temp.toFixed(0) + "°")
@@ -106,7 +106,7 @@ $("form").on('submit', function (e) {
 
             $("#date4").append(response.list[31].dt_txt.slice(5, 10))
             $('#date4').append("<br>")
-            var icon = `http://api.openweathermap.org/img/wn/${response.list[31].weather[0].icon}@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
             $('#date4').append(`<img src="${icon}">`);
             $('#date4').attr("style", "font-size: 10px; text-align: center;")
             $('#date4').append("Tempurature: " + response.list[31].main.temp.toFixed(0) + "°")
@@ -115,7 +115,7 @@ $("form").on('submit', function (e) {
 
             $("#date5").append(response.list[39].dt_txt.slice(5, 10))
             $('#date5').append("<br>")
-            var icon = `http://api.openweathermap.org/img/wn/${response.list[39].weather[0].icon}@2x.png`
+            var icon = `http://openweathermap.org/img/wn/10d@2x.png`
             $('#date5').append(`<img src="${icon}">`);
             $('#date5').attr("style", "font-size: 10px; text-align: center;")
             $('#date5').append("Tempurature: " + response.list[39].main.temp.toFixed(0) + "°")
@@ -198,7 +198,7 @@ $(".btn").on('click', function () {
         forecastData();
 
         function forecastData() {
-            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
+            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=${APIKey}`
             $.ajax({
                 url: forecastUrl,
                 method: "GET"
@@ -317,7 +317,7 @@ function initialize() {
         forecastData();
 
         function forecastData() {
-            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=62eabb354d424659c7bbc7f4c19b2dc1`
+            var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}35&lon=${lon}&units=imperial&APPID=${APIKey}`
         $.ajax({
             url: forecastUrl,
             method: "GET"
