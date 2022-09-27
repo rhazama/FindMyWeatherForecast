@@ -14,8 +14,8 @@ body {
 #main-container {
     background-color: rgba(230, 230, 230, 0.692);
     width: 75%;
-    min-width:500px;
-    min-height: 80vh;
+    min-width: 500px;
+    min-height: 780px;
     height: fit-content;
     margin: 3% auto;border-radius: 10px;
     padding: 0;
@@ -90,7 +90,7 @@ img {
     border: 1px solid rgba(112, 112, 112, 0.315);
     background-color: rgba(255, 255, 255, 0.295);
     margin: 15px;
-    height: 200px;
+    height: 270px;
     float: left;
     width: 90%;
     border-radius: 10px;
@@ -137,7 +137,7 @@ img {
     margin: 15px;
     height: fit-content;
     float: left;
-    width: 90%;
+    width: 97%;
     padding: 40px auto 0 auto;
     border-radius: 10px;
     display: flex;
@@ -150,7 +150,7 @@ img {
 }
 
 .forecast-date {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
 }
 
