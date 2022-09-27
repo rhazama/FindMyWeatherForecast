@@ -15,7 +15,7 @@ function initialize() {
 
 
     function getWeather(cityName) {
-        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&uints=imperial" + "&appid=" + APIKey;
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial" + "&appid=" + APIKey;
         axios.get(queryURL)
 
 

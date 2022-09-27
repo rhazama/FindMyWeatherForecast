@@ -108,6 +108,11 @@ img {
     font-size: 25px;
 }
 
+.city-name {
+    font-size: 34px;
+    font-weight: bold;
+}
+
 .forecast-div {
     border: 1px solid rgba(112, 112, 112, 0.315);
     background-color: rgba(255, 255, 255, 0.295);
