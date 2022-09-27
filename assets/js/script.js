@@ -1,6 +1,7 @@
 function initialize() {
     var inputEl = document.getElementById("city-input");
     var searchEl = document.getElementById("searchBtn");
+    var dateEl = document.getElementById("date");
     var nameEl = document.getElementById("city-name");
     var picEl = document.getElementById("icon");
     var tempEl = document.getElementById("temp");
@@ -24,7 +25,8 @@ function initialize() {
             var day = currentDate.getDate();
             var month = currentDate.getMonth() + 1;
             var year = currentDate.getFullYear();
-            nameEl.innerHTML = month + "/" + day + "/" + year + " " + response.data.name;
+            dateEl.innerHTML = month + "/" + day + "/" + year;
+            nameEl.innerHTML = response.data.name;
             let weatherPic = response.data.weather[0].icon;
                 picEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
                 picEl.setAttribute("alt", response.data.weather[0].description);
@@ -95,7 +97,7 @@ function initialize() {
             const historyItem = document.createElement("input");
             historyItem.setAttribute("type", "text");
             historyItem.setAttribute("readonly", true);
-            historyItem.setAttribute("class", "form-control d-block text-light bg-dark");
+            historyItem.setAttribute("class", "histoyEl form-control d-block text-light bg-dark");
             historyItem.setAttribute("value", searchHistory[i]);
             historyItem.addEventListener("click", function() {
                 getWeather(historyItem.value);
