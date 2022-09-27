@@ -31,7 +31,16 @@ function initialize() {
             let UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey + "&cnt=1";
             axios.get(UVQueryURL)
 
-            
+            .then(function(response){
+                let UVIndex = document.createElement("span");
+                UVIndex.setAttribute("class", "badge badge-success");
+                UVIndex.innerHTML = response.data[0].value;
+                currentUVEl.innerHTML = "UV Index: ";
+                currentUVEl.append(UVIndex);
+            });
+            let cityID = response.data.id;
+            let forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units=imperial" + "&appid=" + APIKey;
+            axios.get(forecastQueryURL)
         })
     }
 }
