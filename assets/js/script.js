@@ -93,8 +93,12 @@ function initialize() {
         }
     }
 
-    
+    renderSearchHistory();
+    if (searchHistory.length > 0) {
+        getWeather(searchHistory[searchHistory.length - 1]);
+    }
 }
+initialize();
 
 
 // loadData();
@@ -439,4 +443,4 @@ function initialize() {
 //         });
 // };
 
-initialize();
+//initialize();
