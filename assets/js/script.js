@@ -1,11 +1,11 @@
 function initialize() {
-    var inputEl = document.getElementById("cityInput");
+    var inputEl = document.getElementById("city-input");
     var searchEl = document.getElementById("searchBtn");
-    var nameEl = document.getElementById("cityName");
-    var picEl = document.getElementById("currentPic");
+    var nameEl = document.getElementById("city-name");
+    var picEl = document.getElementById("icon");
     var tempEl = document.getElementById("tempurature");
     var windEl = document.getElementById("wind");
-    var uvEl = document.getElementById("uvIndex");
+    var uvEl = document.getElementById("UV-index");
     var historyEl = document.getElementById("history");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 }
