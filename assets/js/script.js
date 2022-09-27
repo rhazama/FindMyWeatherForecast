@@ -1,10 +1,16 @@
 function initialize() {
-    
+    var inputEl = document.getElementById("cityInput");
+    var searchEl = document.getElementById("searchBtn");
+    var nameEl = document.getElementById("cityName");
+    var picEl = document.getElementById("currentPic");
+    var tempEl = document.getElementById("tempurature");
+    var windEl = document.getElementById("wind");
+    var uvEl = document.getElementById("uvIndex");
+    var historyEl = document.getElementById("history");
+    let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 }
 
 var APIKey = "62eabb354d424659c7bbc7f4c19b2dc1";
-var buttonDiv = $("button-div");
-var cityBtnArr = [];
 
 loadData();
 
