@@ -67,8 +67,17 @@ function initialize() {
                     forecastEls[i].append(forecastHumidityEl);
                 }
             })
-        })
+        });
     }
+
+    searchEl.addEventListener("click", function() {
+        var searchTerm = inputEl.value;
+        getWeather(searchTerm);
+        searchHistory.push(searchTerm);
+        localStorage.setItem("searchh",JSON.stringify(searchHistory));
+        renderSearchHistory();
+    })
+    
 }
 
 
