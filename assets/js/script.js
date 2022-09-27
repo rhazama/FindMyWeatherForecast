@@ -1,3 +1,7 @@
+function initialize() {
+    
+}
+
 var APIKey = "62eabb354d424659c7bbc7f4c19b2dc1";
 var buttonDiv = $("button-div");
 var cityBtnArr = [];
@@ -7,6 +11,7 @@ loadData();
 function reloadData() {
     $("#city-title").empty();
     $("#tempurature").empty();
+    $("#Humidity").empty();
     $("#wind-speed").empty();
 };
 
