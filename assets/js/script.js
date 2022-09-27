@@ -8,9 +8,15 @@ function initialize() {
     var uvEl = document.getElementById("UV-index");
     var historyEl = document.getElementById("history");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+
+    var APIKey = "62eabb354d424659c7bbc7f4c19b2dc1";
+
+    function getWeather(cityName) {
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&uints=imperial" + "&appid=" + APIKey;
+        axios.get(queryURL)
+    }
 }
 
-var APIKey = "62eabb354d424659c7bbc7f4c19b2dc1";
 
 loadData();
 
