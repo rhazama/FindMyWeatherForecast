@@ -3,7 +3,7 @@ function initialize() {
     var searchEl = document.getElementById("searchBtn");
     var nameEl = document.getElementById("city-name");
     var picEl = document.getElementById("icon");
-    var tempEl = document.getElementById("tempurature");
+    var tempEl = document.getElementById("temp");
     var humidityEl = document.getElementById("humidity");
     var windEl = document.getElementById("wind");
     var uvEl = document.getElementById("UV-index");
@@ -28,7 +28,7 @@ function initialize() {
             let weatherPic = response.data.weather[0].icon;
                 picEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
                 picEl.setAttribute("alt", response.data.weather[0].description);
-                tempEl.innerHTML = "Tempurature: " + response.data.main.temp ;
+                tempEl.innerHTML = "Tempurature: " + response.data.main.temp;
                 humidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
                 windEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " MPH";
             let lat = response.data.coord.lat;
@@ -42,7 +42,7 @@ function initialize() {
                 let UVIndex = document.createElement("span");
                 UVIndex.setAttribute("class", "badge badge-success");
                 UVIndex.innerHTML = response.data[0].value;
-                uvEl.innerHTML = "UV Index:";
+                uvEl.innerHTML = "UV Index: ";
                 uvEl.append(UVIndex);
             });
             let cityID = response.data.id;
@@ -64,7 +64,7 @@ function initialize() {
                     forecastDateEl.innerHTML = forecastMonth + "/" + forecastDay + "/" + forecastYear;
                     forecastEls[i].append(forecastDateEl);
                     var forecastWeatherEl = document.createElement("img");
-                    forecastWeatherEl.setAttribute("src", "https://api.openweathermap.org/img/wn/" + response.data.list[forecastIndex].weather[0].icon + "@2x.png");
+                    forecastWeatherEl.setAttribute("src", "https://openweathermap.org/img/wn/" + response.data.list[forecastIndex].weather[0].icon + "@2x.png");
                     forecastWeatherEl.setAttribute("alt", response.data.list[forecastIndex].weather[0].description);
                     forecastEls[i].append(forecastWeatherEl);
                     var forecastTempEl = document.createElement("p");
