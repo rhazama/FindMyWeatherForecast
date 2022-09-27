@@ -24,11 +24,11 @@ function initialize() {
             var day = currentDate.getDate();
             var month = currentDate.getMonth() + 1;
             var year = currentDate.getFullYear();
-            nameEl.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
+            nameEl.innerHTML = month + "/" + day + "/" + year + " " + response.data.name;
             let weatherPic = response.data.weather[0].icon;
                 picEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
                 picEl.setAttribute("alt", response.data.weather[0].description);
-                tempEl.innerHTML = "Tempurature: " + response.data.main.temp;
+                tempEl.innerHTML = "Tempurature: " + response.data.main.temp + "°";
                 humidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
                 windEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " MPH";
             let lat = response.data.coord.lat;
@@ -68,7 +68,7 @@ function initialize() {
                     forecastWeatherEl.setAttribute("alt", response.data.list[forecastIndex].weather[0].description);
                     forecastEls[i].append(forecastWeatherEl);
                     var forecastTempEl = document.createElement("p");
-                    forecastTempEl.innerHTML = "Temp: " + response.data.list[forecastIndex].main.temp;
+                    forecastTempEl.innerHTML = "Temp: " + response.data.list[forecastIndex].main.temp + "°";
                     forecastEls[i].append(forecastTempEl);
                     var forecastHumidityEl = document.createElement("p");
                     forecastHumidityEl.innerHTML = "Humidity: " + response.data.list[forecastIndex].main.humidity + "%";
