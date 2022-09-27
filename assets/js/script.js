@@ -26,7 +26,12 @@ function initialize() {
                 currentPicEl.setAttribute("alt", response.data.weather[0].description);
                 currentTempEl.innerHTML = "Tempurature: " + response.data.main.temp ;
                 currentHumidityEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " MPH";
+            let lat = response.data.coord.lat;
+            let lon = response.data.coord.lon;
+            let UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey + "&cnt=1";
+            axios.get(UVQueryURL)
 
+            
         })
     }
 }
