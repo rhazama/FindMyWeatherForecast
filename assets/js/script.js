@@ -41,6 +41,32 @@ function initialize() {
             let cityID = response.data.id;
             let forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units=imperial" + "&appid=" + APIKey;
             axios.get(forecastQueryURL)
+
+            .then(function (response) {
+                var forecastEls = documents.querySelectorAll(".forecast");
+                for (i=0; i<forecastEls.length; i++) {
+                    forecastEls[i].innerHTML = "";
+                    var forecastIndex = i*8 + 4;
+                    var forecastDate = new Date(response.data.list[forecastIndex].dt * 1000);
+                    var forecastDay = forecastDate.getDate();
+                    var forecastMonth = forecastDate.getMonth();
+                    var forecastYear = forecastDate.getFullYear();
+                    var forecastDateEl = document.createElement("p");
+                    forecastDateEl.setAttribute("class", "mt-3 mb-0 forecast-date");
+                    forecastDateEl.innerHTML = forecastMonth + "/" + forecastDay + "/" + forecastYear;
+                    forecastEls[i].append(forecastDateEl);
+                    var forecastDateEl = document.createElement("img");
+                    forecastWeatherEl.setAttribute("src", "https://api.openweathermap.org/img/wn/" + response.data.list[forecastIndex].weather[0].icon + "@2x.png");
+                    forecastWeatherEl.setAttribute("alt", response.data.list[forecastIndex].weather[0].description);
+                    forecastEls[i].append(forecastWeatherEl);
+                    var forecastTempEl = document.createElement("p");
+                    forecastTempEl.innerHTML = "Temp: " + response.data.list[forecastIndex].main.temp;
+                    forecastEls[i].append(forecastTempEl);
+                    var forecastHumidityEl = document.createElement("p");
+                    forecastHumidityEl.innerHTML = "Humidity: " + response.data.list[forecastIndex].main.humidity + "%";
+                    forecastEls[i].append(forecastHumidityEl);
+                }
+            })
         })
     }
 }
