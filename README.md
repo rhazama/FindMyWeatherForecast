@@ -16,7 +16,6 @@ You can run the application by running the following link: https://rhazama.githu
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 ## Installation
 You can access the application through the link above.
