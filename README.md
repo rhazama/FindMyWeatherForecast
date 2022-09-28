@@ -20,7 +20,7 @@ You can run the application by running the following link: https://rhazama.githu
 ## Installation
 You can access the application through the link above.
 ## Usage
-For users looking to calculate simple math.
+For users looking to find information about the weather in their or other local cities.
 ## License
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 <br />
