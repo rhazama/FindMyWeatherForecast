@@ -2,7 +2,7 @@
 
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 
-<img width="1185" alt="Screen Shot 2022-09-23 at 2 50 11 PM" src="https://user-images.githubusercontent.com/88352747/192061587-b10a9d51-123d-4b56-95b5-8102e80a8bf0.png">
+<img width="1483" alt="Screen Shot 2022-09-27 at 4 56 18 PM" src="https://user-images.githubusercontent.com/88352747/192658209-a4e75c44-b48c-4ccf-8e95-aaf776c9e2f6.png">
 
 ## Description
 Find My Weather Forecast is a website designed to help you find the weather of the user's city. Find My Weather Forecast will provide the user with the forecast of their city or the city of their choice for the next 5 days of the week. The weather application also provides users with tempurature, windspeed, UV index, and humidity.
